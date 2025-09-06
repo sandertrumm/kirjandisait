@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
+    <title>Kirjandiabi</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body class="ubuntu-regular">
+<h1>Kirjandiabi</h1>
+<section class="content">
+<div id="kirjandilist">
+    <div class="kirjandikast">
+        <p>This is some really long text. I mean, *really* long text. Maybe this box will work, who knows.
+        What did you have for lunch today? But what did you have for dinner?
+            Ah, that's good. How are you feeling? Wanna grab some breakfast?</p>
+    </div>
+    <div class="kirjandikast">
+        {{ g.text }}
+    </div>
+    <div class="kirjandikast">
+        {{ g.text }}
+    </div>
+</div>
+</section>
+</body>
+</html>
