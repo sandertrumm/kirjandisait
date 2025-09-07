@@ -30,9 +30,15 @@ def create_app(test_config=None):
     def index():
         flask.g.text = random.choice(os.listdir('kirjandisait/text'))
         return render_template("index.html")
+
     # a simple page that says hello
     @app.route('/hello')
     def hello():
         return 'Hello, World!'
+
+    # main page where essay prompts, timer, etc. are displayed
+    @app.route('/toolaud')
+    def toolaud():
+        return render_template('toolaud.html')
 
     return app
